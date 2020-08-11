@@ -47,7 +47,7 @@ public class ControleJogador : MonoBehaviour
         if(Input.touchCount >= 1) {
             if(Input.GetTouch(0).phase == TouchPhase.Began) {
                 initialPosition = Input.GetTouch(0).position;
-            } else if(Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(0).phase == TouchPhase.Stationary){
+            } else if(Input.GetTouch(0).phase == TouchPhase.Ended || Input.GetTouch(0).phase == TouchPhase.Canceled){
                 if (Input.GetTouch(0).position.x > initialPosition.x && raiaAtual<2) {
                     novaRaia=raiaAtual+1;
                 } else if (Input.GetTouch(0).position.x < initialPosition.x && raiaAtual>0) {
